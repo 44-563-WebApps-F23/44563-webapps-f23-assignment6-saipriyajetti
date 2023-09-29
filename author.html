@@ -14,31 +14,19 @@
 
     <input type="button" onclick="resolveForm()" value="Get values from form">
 </form>
-
-
 <p id="result">This text will be replaced </p>
 <label for="hidden-author">The hidden author name</label>
-
-    <input type="password" id="hidden-author" value="Dickens">
-
-    <br>
-
+   <input type="password" id="hidden-author" value="Dickens">
+   <br>
     <label for="guess-author">Guess the author</label>
-
-    <input type="text" id="guess-author">
-
+   <input type="text" id="guess-author">
     <br>
-
     <input type="button" value="Check the guess" onclick="checkAuthor()">
-
 </form>
-
 <p>Results:</p>
 
 <div id="results">Good: 0, Oops: 0</div>
-
 <script> 
-
 function resolveForm (){
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
