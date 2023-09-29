@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
- 
+ <title>assingment 6</title>
 <body>
 
-<h2>Getting input</h2>
+<h2>Author entry sai priya jetti</h2>
 
 <form>
     <label for="form1_age">What is your age </label>
@@ -13,19 +13,30 @@
     <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
 
     <input type="button" onclick="resolveForm()" value="Get values from form">
-   <p id="result">This text will be replaced </p>
-  <label for="hidden-author">The hidden author name</label>
-  <input type="password" id="hidden-author" value="Dickens">
-  <br>
-   <label for="guess-author">Guess the author</label>
-   <input type="text" id="guess-author">
-   <br>
-   <input type="button" value="Check the guess" onclick="checkAuthor()">
-  </form>
+</form>
+
+
+<p id="result">This text will be replaced </p>
+<label for="hidden-author">The hidden author name</label>
+
+    <input type="password" id="hidden-author" value="Dickens">
+
+    <br>
+
+    <label for="guess-author">Guess the author</label>
+
+    <input type="text" id="guess-author">
+
+    <br>
+
+    <input type="button" value="Check the guess" onclick="checkAuthor()">
+
+</form>
 
 <p>Results:</p>
 
 <div id="results">Good: 0, Oops: 0</div>
+
 <script> 
 
 function resolveForm (){
@@ -40,6 +51,28 @@ function resolveForm (){
     } else {
         out.innerHTML = "Values were not confirmed"
     }
+}
+var good = 0;
+
+   var oops = 0;
+  function checkAuthor() {
+  var hiddenAuthorInput = document.getElementById("hidden-author");
+   var guessAuthorInput = document.getElementById("guess-author");
+    var resultElement = document.getElementById("results");
+    var hiddenAuthor = hiddenAuthorInput.value;
+   var guessedAuthor = guessAuthorInput.value;
+    if (hiddenAuthor === guessedAuthor) {
+        good++;
+    alert("You got it right!");
+
+} else {
+
+      oops++;
+
+      alert("Sorry");
+
+ }
+    resultElement.innerHTML = "Good: " + good + ", Oops: " + oops;
 }
 </script>
 
